@@ -30,8 +30,11 @@ public class CheckWinnerUtil {
         cornerHashMap = new HashMap<>();
     }
 
-    public Player checkWinner(Board board, Move currentMove){ // input
+    public Player checkWinner(Move currentMove){ // input
         // update row and col hashmaps
+        /*
+        Our instructor didnt follow single responsibility principle here.
+         */
         char symbol = currentMove.getPlayer().getSymbol();
         int row = currentMove.getCell().getRow();
         int col = currentMove.getCell().getCol();

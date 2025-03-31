@@ -42,7 +42,7 @@ public class Main {
             Move move = gameController.createMove(currentPlayer, game);
             boardService.printBoard(game.getBoard());
             try {
-                Player winner = gameController.checkWinner(game.getBoard(), move, game.getCheckWinnerUtil());
+                Player winner = gameController.checkWinner(move, game.getCheckWinnerUtil());
                 if (winner != null) {
                     System.out.println("WINNER : " + winner.getName());
                     game.setGameState(GameState.WINNER_DONE);

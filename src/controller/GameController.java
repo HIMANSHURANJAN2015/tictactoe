@@ -63,8 +63,8 @@ public class GameController {
         return null;
     }
 
-    public Player checkWinner(Board board, Move move, CheckWinnerUtil checkWinnerUtil) {
-        return checkWinnerUtil.checkWinner(board, move);
+    public Player checkWinner(Move move, CheckWinnerUtil checkWinnerUtil) {
+        return checkWinnerUtil.checkWinner(move);
     }
 
     public Game undoGame(int moves, Game game){
