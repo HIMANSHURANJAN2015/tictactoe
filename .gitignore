@@ -1,0 +1,18 @@
+# IntelliJ IDEA specific files
+.idea/workspace.xml
+#.idea/libraries/
+#.idea/shelf/
+#.idea/modules.xml
+#.idea/*.iml
+
+# Compiled class files
+out/
+
+# Build output
+#*.class
+#*.jar
+#*.war
+
+# OS-specific files
+#.DS_Store
+#Thumbs.db
