@@ -1,9 +1,9 @@
 package service;
 
+import models.Cell;
 import models.Game;
-import models.Move;
 import models.Player;
 
 public interface BotPlayingStrategy {
-    Move makeMove(Player player, Game game);
+    Cell findNextMove(Game game, Player player);
 }

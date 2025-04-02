@@ -64,6 +64,7 @@ public class CheckWinnerUtil {
             cornerHashMap.put(symbol, cornerHashMap.getOrDefault(symbol, 0 ) + 1);
         }
 
+        //winning condition
         if(cornerHashMap.getOrDefault(symbol, 0) == 4
                 || topLeftDiagonalMap.getOrDefault(symbol, 0) == size
                 || topRightDiagonalMap.getOrDefault(symbol, 0) == size

@@ -4,19 +4,14 @@ import models.*;
 
 import java.util.List;
 
-public class RandomBotPlayingStrategy {
+public class RandomBotPlayingStrategy implements BotPlayingStrategy {
 
-    public static Move makeMove(Player player, Game game) {
+    public Cell findNextMove(Game game, Player player) {
         Board board = game.getBoard();
         for(List<Cell> cells : board.getCells()){
             for(Cell cell : cells){
                 if(cell.getCellState().equals(CellState.EMPTY)){
-                    cell.setCellState(CellState.FILLED);
-                    cell.setPlayer(player);
-                    Move move = new Move(cell, player);
-                    game.getMoves().add(move);
-                    game.getPlayedBoards().add(game.getBoard().clone());
-                    return move;
+                    return cell;
                 }
             }
         }

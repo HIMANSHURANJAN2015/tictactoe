@@ -13,8 +13,8 @@ public class Game {
     private GameState gameState;
     private Player winner;
     private int nextMovePlayerIndex;
-    private List<Move> moves;
-    private List<Board> playedBoards;
+    private List<Move> moves;//for undo strategy
+    private List<Board> playedBoards;//to capture snapshots to replay/undo
     private CheckWinnerUtil checkWinnerUtil;
 
     private Game(Board board, List<Player> players, CheckWinnerUtil checkWinnerUtil) {
